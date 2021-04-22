@@ -32,7 +32,7 @@ test('given function getRole', () => {
   expect(intern.role).toBe('Intern');
 })
 
-test('github username', () => {
+test('school', () => {
   const intern = new Intern ("Walter", "Raleigh", 52, "ElDorado@Roanoke.com", "Oxford");
-  expect(intern.github).toEqual(expect.any(String));
+  expect(intern.school).toEqual(expect.any(String));
 })
