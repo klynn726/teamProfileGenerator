@@ -31,3 +31,8 @@ test('given function getRole', () => {
   const manager = new Manager ("Pope", "Pius V", 1, "PopePiusV@vatican.com", 4)
   expect(manager.role).toBe('Manager');
 })
+
+test('get office number', () => {
+  const manager = new Manager ("Pope", "Pius V", 1, "PopePiusV@vatican.com", 4)
+  expect(manager.officeNumber).toEqual(expect.any(Number));
+})
