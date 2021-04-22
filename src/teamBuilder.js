@@ -6,9 +6,7 @@ const Intern = require('../lib/Intern');
 const Engineer = require('../lib/Engineer');
 
 class TeamBuilder {
-  constructor(){
-
-  }
+  
    initalizeApp = () => {
     return inquirer.prompt([
       {
@@ -96,3 +94,33 @@ class TeamBuilder {
         message: 'What is your school?',
       },
     ])}};
+
+    module.exports = TeamBuilder;
+
+    // this will only accept one team member, this needs to be an object or array
+// this was taken as base code to refactor from last assignment/module
+
+    writeFile = fileContent => {
+      return new Promise((resolve, reject) => {
+        fs.writeFile(`./dist/${output}`, fileContent, err => {
+          if (err) {
+            reject(err);
+            return;
+          }
+    
+          resolve({
+            ok: true,
+            message: 'File created!'
+          });
+        });
+      });
+    };
+
+    promptUser()
+.then(answers => {
+  readMe =  generateMarkdown(answers);
+  writeFile(readMe)
+})
+.catch(err => {
+  console.log(err);
+});
