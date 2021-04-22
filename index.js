@@ -1,3 +1,4 @@
-const TeamBuilder = require('.src/teamBuilder');
+const TeamBuilder = require('./src/teamBuilder');
 
-new TeamBuilder().initializeApp();
+new TeamBuilder().initalizeApp();
+

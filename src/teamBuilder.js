@@ -93,34 +93,40 @@ class TeamBuilder {
         name: 'school',
         message: 'What is your school?',
       },
-    ])}};
+    ])};
+  
+
+  };
 
     module.exports = TeamBuilder;
 
     // this will only accept one team member, this needs to be an object or array
 // this was taken as base code to refactor from last assignment/module
+// check module 9 project (not assignment) for an example of how to
+// make arrays/objects and push to html file
 
-    writeFile = fileContent => {
-      return new Promise((resolve, reject) => {
-        fs.writeFile(`./dist/${output}`, fileContent, err => {
-          if (err) {
-            reject(err);
-            return;
-          }
+
+//     writeFile = fileContent => {
+//       return new Promise((resolve, reject) => {
+//         fs.writeFile(`./dist/${output}`, fileContent, err => {
+//           if (err) {
+//             reject(err);
+//             return;
+//           }
     
-          resolve({
-            ok: true,
-            message: 'File created!'
-          });
-        });
-      });
-    };
+//           resolve({
+//             ok: true,
+//             message: 'File created!'
+//           });
+//         });
+//       });
+//     };
 
-    promptUser()
-.then(answers => {
-  readMe =  generateMarkdown(answers);
-  writeFile(readMe)
-})
-.catch(err => {
-  console.log(err);
-});
+//     promptUser()
+// .then(answers => {
+//   readMe =  generateMarkdown(answers);
+//   writeFile(readMe)
+// })
+// .catch(err => {
+//   console.log(err);
+// });
